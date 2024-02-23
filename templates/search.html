@@ -77,6 +77,20 @@
         border-radius: 4px;
         cursor: pointer;
       }
+
+      .add-student-button {
+            display: block;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #1d232e;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
     </style>
   </head>
   <body>
@@ -126,5 +140,6 @@
         </tbody>
       </table>
     </section>
+    <a href="{{ url_for('add_student') }}" class="add-student-button">+ Add Student</a>
   </body>
 </html>

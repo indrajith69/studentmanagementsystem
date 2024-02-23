@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1d232e;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #1d232e;
+            color: #fff;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Student Details</h1>
+    </header>
+
+    <section>
+        <h2>Add Details</h2>
+
+        <!-- Student Details Form -->
+        <form action="/add_details" method="post">
+            <table>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>Register Number</td>
+                    <td><input type="text" name="registerno" value=""></td>
+                </tr>
+                <tr>
+                    <td>First Name</td>
+                    <td><input type="text" name="fname" value=""></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><input type="text" name="lname" value=""></td>
+                </tr>
+                <tr>
+                    <td>Semester</td>
+                    <td><input type="text" name="semester" value=""></td>
+                </tr>
+                <tr>
+                    <td>CGPA</td>
+                    <td><input type="text" name="cgpa" value=""></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="text" name="email" value=""></td>
+                </tr>
+                <tr>
+                    <td>Phone Number</td>
+                    <td><input type="text" name="phoneno" value=""></td>
+                </tr>
+                <tr>
+                    <td>Date of Birth</td>
+                    <td><input type="text" name="dob" value=""></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><input type="text" name="address" value=""></td>
+                </tr>
+                <tr>
+                    <td>Mother's Name</td>
+                    <td><input type="text" name="mothername" value=""></td>
+                </tr>
+                <tr>
+                    <td>Mother's Occupation</td>
+                    <td><input type="text" name="motheroccupation" value=""></td>
+                </tr>
+                <tr>
+                    <td>Father's Name</td>
+                    <td><input type="text" name="fathername" value=""></td>
+                </tr>
+                <tr>
+                    <td>Father's Occupation</td>
+                    <td><input type="text" name="fatheroccupation" value=""></td>
+                </tr>
+                <!-- Add other editable fields -->
+            </table>
+            <input type="submit" value="Save Changes">
+        </form>
+    </section>
+
+</body>
+</html>

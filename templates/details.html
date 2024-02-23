@@ -44,6 +44,28 @@
             background-color: #1d232e;
             color: #fff;
         }
+
+        .edit-button {
+            background-color: #1d232e;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .remove-button {
+            background-color: #1d232e;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .edit-button:hover {
+            background-color: #000;
+        }
     </style>
 </head>
 <body>
@@ -60,58 +82,73 @@
             <tr>
                 <th>Attribute</th>
                 <th>Details</th>
-            </tr>
-            <tr>
-                <td>First Name</td>
-                <td>Deepak</td>
-            </tr>
-            <tr>
-                <td>Last Name</td>
-                <td>S</td>
-            </tr>
-            <tr>
-                <td>Semester</td>
-                <td>5th</td>
-            </tr>
-            <tr>
-                <td>Age</td>
-                <td>20</td>
-            </tr>
-            <tr>
-                <td>CGPA</td>
-                <td>6.3</td>
-            </tr>
-            <tr>
-                <td>Email</td>
-                <td>kingleo@gmail.com</td>
-            </tr>
-            <tr>
-                <td>Phone Number</td>
-                <td>7356938074</td>
-            </tr>
-            <tr>
-                <td>Date of Birth</td>
-                <td>25-03-2003</td>
-            </tr>
-            <tr>
-                <td>Address</td>
-                <td>aranmula, pathanamthitta</td>
-            </tr>
-            <tr>
-                <td>Mother's Name</td>
-                <td>Shubha kumari</td>
-            </tr>
-            <tr>
-                <td>Mother's Occupation</td>
-                <td>Teacher</td>
-            </tr>
-            <tr>
-                <td>Father's Name</td>
-                <td>Suresh Kumar</td>
-            </tr>
-            <tr>
-                <td>Father's Occupation</td>
-                <td>Engineer</td>
+                    <tr>
+                        <td>Register Number</td>
+                        <td>{{ userdata['registerno'] }}</td>
+                    </tr>
+                    <tr>
+                        <td>First Name</td>
+                        <td>{{ userdata['fname'] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Last Name</td>
+                        <td>{{ userdata['lname'] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Semester</td>
+                        <td>{{ userdata['semester'] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Age</td>
+                        <td>{{ userdata['age'] }}</td>
+                    </tr>
+                    <tr>
+                        <td>CGPA</td>
+                        <td>{{ userdata['cgpa'] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>{{ userdata['email'] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number</td>
+                        <td>{{ userdata['phoneno'] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Date of Birth</td>
+                        <td>{{ userdata['dob'] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td>aranmula, pathanamthitta</td>
+                    </tr>
+                    <tr>
+                        <td>Mother's Name</td>
+                        <td>{{ userdata['mothername'] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Mother's Occupation</td>
+                        <td>{{ userdata['motheroccupation'] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Father's Name</td>
+                        <td>{{ userdata['fathername'] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Father's Occupation</td>
+                        <td>{{ userdata['fatheroccupation'] }}</td>
+                    </tr>
+                <td colspan="4">
+                    <form action="/edit_details" method="post">
+                        <input type="hidden" name="registerno" value="{{ userdata['registerno'] }}">
+                        <button type="submit" class="edit-button">Edit Details</button>
+                    </form>
+                    <br>
+                    <form action="/remove_student" method="post">
+                        <input type="hidden" name="registerno" value="{{ userdata['registerno'] }}">
+                        <button type="submit" class="remove-button">Delete Student</button>
+                    </form>
+                </td>
             </tr>
         </table>
     </section>
